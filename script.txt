@@ -1,0 +1,12 @@
+_object = nearestObjects [player,[],2000]; 
+_first = []; 
+{ 
+_className = typeOf _x; 
+ if  (_x isKindOf "CUP_O_ZU23_TK")  then {
+ _pos = position _x;
+_first pushBack  _pos; 
+ 
+}; 
+ 
+}forEach _object; 
+copyToClipboard str _first;
